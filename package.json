@@ -1,0 +1,42 @@
+{
+  "name": "fresher-guide",
+  "version": "0.0.1",
+  "description": "A guide for freshers",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha test",
+    "start": "PORT='1816' node app",
+    "foreverstart": "forever start app.js",
+    "stop": "forever stop app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navinbisht1992/nodejs-frontend-sample.git"
+  },
+  "keywords": [
+    "promise",
+    "async",
+    "await",
+    "const",
+    "let",
+    "require",
+    "module",
+    "exports"
+  ],
+  "author": "navin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/navinbisht1992/nodejs-frontend-sample/issues"
+  },
+  "homepage": "https://github.com/navinbisht1992/nodejs-frontend-sample#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "forever-monitor": "^1.7.1",
+    "lodash": "^4.17.10",
+    "path": "^0.12.7",
+    "simple-node-logger": "^0.93.37"
+  }
+}

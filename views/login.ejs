@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <!-- All these CSS files are in plublic directory, as we had made all the content of public directory available for anyone from app.js -->
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/css/app.css" />
+        <link rel="shortcut icon" href="logo.jpg" />
+        <title>Sign-Up/Login Form</title>
+    </head>
+    <body>
+        <div class="col-md-6 offset-md-3">
+            <!-- action of form denines addres of request, this statement means there's a router with `/login` and its method is `POST` -->
+            <form action="/login" method="POST">
+                <div class="col-md-12 form-group">
+                    <label for="email1">Email:</label>
+                    <!-- name of input field is send over to API when using `form action` -->
+                    <input name="email" id="email1" class="form-control" type="email" required>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="password1">Password:</label>
+                    <input name="password" id="password1" class="form-control" type="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <!-- Following code is simillar to above just in place of using `button` to `submit form` will use javascript and for also validation. -->
+            <!--
+                <form id="loginForm" method="POST" action="/login">
+                    <div class="col-md-12 form-group">
+                        <label for="email1">Email:</label>
+                        <input name="email" id="email1" class="form-control" type="email">
+                        <span id="emailError" class="hide error">Valid Email Required</span>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <label for="password1">Password:</label>
+                        <input name="password" id="password1" class="form-control" type="password">
+                        <span id="passwordError" class="hide error">Password Required</span>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <p class="btn btn-primary form-control" onclick="submit()">Submit</p>
+                    </div>
+                </form>
+            -->
+        </div>
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <!-- `login.js` is only used in `login.ejs` -->
+        <script type="text/javascript" src="/js/login.js"></script>
+    </body>
+</html>

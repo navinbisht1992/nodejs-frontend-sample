@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">    
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/css/app.css" />
+        <link rel="icon" href="logo.jpg" />
+        <title>Info</title>
+    </head>
+    <body>
+        <div class="col-md-6 offset-md-3">
+            <div class="col-md-12 form-group">
+                <label>Email provided in Login: <%=email%></label>
+            </div>
+            <div class="col-md-6">
+                <p class="btn btn-primary form-control" onclick="showForm('#addInfo')">Add Detail</p>
+            </div>
+            <div class="col-md-6">
+                <p class="btn btn-primary form-control" onclick="showForm('#showInfo');getDetail();">Show Detail</p>
+            </div>
+            <!-- No need for `form` as will use JavaScript for Single Page Application -->
+            <div id="addInfo" class="hide">
+                <div class="col-md-12 form-group">
+                    <label for="addEmail">Email:</label>
+                    <input id="addEmail" class="form-control" type="email">
+                    <span id="addEmailError" class="hide error">Valid Email Required</span>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="addFname">First Name:</label>
+                    <input id="addFname" class="form-control" type="text">
+                    <span id="addFnameError" class="hide error">Valid First Name Required</span>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="addLname">Last Name:</label>
+                    <input id="addLname" class="form-control" type="text">
+                    <span id="addLnameError" class="hide error">Valid Last Name Required</span>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="addPhone">Phone:</label>
+                    <input id="addPhone" class="form-control" type="text">
+                    <span id="addPhoneError" class="hide error">Valid Phone Required</span>
+                </div>
+                <div class="col-md-12 form-group">
+                    <label for="addGender">Gender:</label>
+                    <select id="addGender" class="form-control">
+                        <option value="">Select:</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <span id="addGenderError" class="hide error">Gender Required</span>
+                </div>
+                <div class="col-md-12 form-group">
+                    <p class="btn btn-primary form-control" onclick="addInfo()">Submit</p>
+                </div>
+            </div>
+            <!-- No need for `form` as will use JavaScript for Single Page Application -->
+            <div id="showInfo" class="hide">
+                <div id="showDetails" class="col-md-12"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <!-- `login.js` is only used in `login.ejs` -->
+        <script type="text/javascript" src="/js/addInfo.js"></script>
+        <script type="text/javascript" src="/js/editInfo.js"></script>
+        <script type="text/javascript" src="/js/getInfo.js"></script>
+        <script type="text/javascript" src="/js/service.js"></script>
+    </body>
+</html>

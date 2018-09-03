@@ -1,0 +1,12 @@
+/**
+ * Custom css designed for our purpose which are not fulfilled by bootstrap css
+*/
+/* Set text color red */
+.error {
+    color: #ff0000
+}
+
+/* Hide block */
+.hide {
+    display: none
+}
